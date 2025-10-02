@@ -1,0 +1,80 @@
+<div class="filters">
+  <!-- Sélecteur de catégorie -->
+  <mat-form-field appearance="outline" class="category-filter">
+    <mat-label>Sélectionner une catégorie</mat-label>
+    <mat-select
+      [(value)]="selectedCategory"
+      (selectionChange)="onCategoryChange($event.value)"
+    >
+      <mat-option
+        *ngFor="let category of categories"
+        [value]="category.value"
+      >
+        {{ category.label }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Champ de recherche -->
+  <mat-form-field appearance="outline">
+    <mat-icon matPrefix>search</mat-icon>
+    <input
+      matInput
+      [formControl]="searchText"
+      placeholder="Rechercher"
+      (input)="applyFilters()"
+    />
+  </mat-form-field>
+
+  <!-- Bouton reset -->
+  <button
+    mat-stroked-button
+    color="primary"
+    (click)="resetFilters()"
+  >
+    <mat-icon>refresh</mat-icon>
+  </button>
+</div>
+
+<!-- Liste des produits -->
+<div class="card-container">
+  <mat-card
+    class="card"
+    *ngFor="let product of pagedItems"
+    (click)="goToProduct(product.id)"
+  >
+    <img
+      mat-card-image
+      [src]="product.imageUrl"
+      alt="{{ product.product_name }}"
+    />
+    <mat-card-title>{{ product?.product_name }}</mat-card-title>
+    <mat-card-subtitle>{{ product.category | category }}</mat-card-subtitle>
+
+    <mat-card-content>
+      <p>{{ product?.price | currency: 'EUR' }}</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="accent"
+        (click)="addToCart(product.id, $event)"
+      >
+        <mat-icon>shopping_cart</mat-icon>
+        Ajouter au panier
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<!-- Pagination -->
+<mat-paginator
+  [length]="totalItems"
+  [pageSize]="itemsPerPage"
+  [pageSizeOptions]="[4, 8, 12]"
+  (page)="onPageChange($event)"
+>
+</mat-paginator>
+<div *ngIf="pagedItems.length === 0" class="no-results">
+  <p>Aucun produit trouvé.</p>
