@@ -2,16 +2,13 @@
   <!-- Sélecteur de catégorie -->
   <mat-form-field appearance="outline" class="category-filter">
     <mat-label>Sélectionner une catégorie</mat-label>
-    <mat-select
-      [(value)]="selectedCategory"
-      (selectionChange)="onCategoryChange($event.value)"
-    >
-      <mat-option
-        *ngFor="let category of categories"
-        [value]="category.value"
-      >
-        {{ category.label }}
-      </mat-option>
+    <mat-select [(value)]="selectedCategory"
+      (selectionChange)="onCategoryChange($event.value)">
+      @for (c of categories; track c.value) {
+      <mat-option [value]="c.value"> {{ c.label }} </mat-option>
+    }@empty {
+      <mat-option disabled>Aucune catégorie</mat-option>
+    }
     </mat-select>
   </mat-form-field>
 
@@ -38,11 +35,8 @@
 
 <!-- Liste des produits -->
 <div class="card-container">
-  <mat-card
-    class="card"
-    *ngFor="let product of pagedItems"
-    (click)="goToProduct(product.id)"
-  >
+  @for (product of pagedItems; track product.id) { 
+  <mat-card class="card" (click)="goToProduct(product.id)">
     <img
       mat-card-image
       [src]="product.imageUrl"
@@ -66,6 +60,9 @@
       </button>
     </mat-card-actions>
   </mat-card>
+  } @empty {
+    <p>Aucun produit trouvé.</p>
+  }
 </div>
 
 <!-- Pagination -->
@@ -76,5 +73,3 @@
   (page)="onPageChange($event)"
 >
 </mat-paginator>
-<div *ngIf="pagedItems.length === 0" class="no-results">
-  <p>Aucun produit trouvé.</p>

@@ -28,11 +28,10 @@ import { Router } from '@angular/router';
     MatIconModule,
     MatButtonModule,
     MatPaginatorModule,
-    // Pipes
     CategoryPipe,
-  ],
+],
   templateUrl: './products-component.html',
-  styleUrl: './products-component.css'
+  styleUrls: ['./products-component.css']
 })
 export class ProductsComponent implements OnInit {
   // Données
