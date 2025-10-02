@@ -1,0 +1,74 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Densité des composants Angular Material : plus compacts */
+:root {
+  --mat-form-field-density: -2;
+  --mat-button-density: -2;
+  --mat-chip-density: -2;
+}
+
+
+/* Conteneur en grille fluide :
+   - auto-fit remplit la ligne et replie les colonnes vides
+   - minmax garantit des cartes min 220–260px, max toute la colonne
+*/
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* Carte : occupe toute la colonne et pousse les actions en bas */
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image couvrante et régulière en hauteur */
+.product-card img {
+  width: 100%;
+  /* height: 180px;     /* ajuste à 160–220px selon ton visuel */
+  aspect-ratio: 4 / 3;  /* garantit un ratio constant, si img de taille différente*/
+  object-fit: cover;    /* recadre proprement sans déformer */
+}
+
+/* Le contenu prend l’espace disponible, les actions collent en bas */
+.product-content {
+  flex: 1 1 auto;
+  margin-bottom: 8px;
+}
+.product-actions {
+  margin-top: auto;
+}
+
+/* Titre sur 2 lignes max (évite les cartes trop hautes) */
+.product-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;   /* nombre de lignes max */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Petits écrans : réduire légèrement les espacements/hauteurs */
+@media (max-width: 599px) {
+  .cards-grid {
+    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .product-card img {
+    height: 160px;
+  }
+}
+
+/* Grands écrans : grille plus dense si tu veux */
+@media (min-width: 1200px) {
+  .cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+}

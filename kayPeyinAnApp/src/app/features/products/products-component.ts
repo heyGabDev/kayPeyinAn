@@ -128,9 +128,7 @@ export class ProductsComponent implements OnInit {
     this.updatePagedProducts();
   }
 
-  // UI actions
   goToProduct(productId: number): void {
-    console.log('Product id: ', productId)
     this.router.navigate(['/product', productId]);
   }
 

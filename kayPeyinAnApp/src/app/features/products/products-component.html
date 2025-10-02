@@ -34,22 +34,22 @@
 </div>
 
 <!-- Liste des produits -->
-<div class="card-container">
+<div class="cards-grid">
   @for (product of pagedItems; track product.id) { 
-  <mat-card class="card" (click)="goToProduct(product.id)">
+  <mat-card class="product-card" (click)="goToProduct(product.id)">
     <img
       mat-card-image
       [src]="product.imageUrl"
-      alt="{{ product.product_name }}"
+      alt="product.product_name"
     />
-    <mat-card-title>{{ product?.product_name }}</mat-card-title>
+    <mat-card-title class="product-title">{{ product?.product_name }}</mat-card-title>
     <mat-card-subtitle>{{ product.category | category }}</mat-card-subtitle>
 
-    <mat-card-content>
+    <mat-card-content class="product-content">
       <p>{{ product?.price | currency: 'EUR' }}</p>
     </mat-card-content>
 
-    <mat-card-actions>
+    <mat-card-actions class="product-actions">
       <button
         mat-raised-button
         color="accent"
