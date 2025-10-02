@@ -1,0 +1,105 @@
+/* Conteneur de page : largeur lisible + padding */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.back-btn {
+  margin-bottom: 12px;
+}
+
+/* Carte principale */
+.product-hero {
+  padding: 16px;
+}
+
+/* Grille 2 colonnes sur écrans moyens+ ; 1 colonne en mobile */
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: minmax(280px, 480px) 1fr;
+    gap: 24px;
+  }
+}
+
+/* Image : ratio cohérent, recadrage propre */
+.product-media {
+  width: 100%;
+}
+.product-image {
+  display: block;
+  width: 100%;
+  height: auto;             /* fallback */
+  aspect-ratio: 4 / 3;      /* ratio stable si supporté */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Infos produit */
+.product-title {
+  margin: 0 0 8px;
+  line-height: 1.2;
+  font-size: clamp(1.25rem, 1.2rem + 1vw, 1.75rem);
+  font-weight: 700;
+}
+.product-meta {
+  color: rgba(0,0,0,0.6);
+  margin-bottom: 12px;
+}
+.product-price {
+  font-size: clamp(1.125rem, 1rem + 1vw, 1.75rem);
+  font-weight: 700;
+  margin: 8px 0 16px;
+}
+
+/* Zone actions */
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.qty-label {
+  font-weight: 600;
+  margin-right: 4px;
+}
+.qty-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.qty-field {
+  width: 96px;
+}
+
+/* CTA */
+.cta {
+  margin-left: auto; /* pousse le bouton à droite sur grands écrans */
+}
+
+@media (max-width: 767px) {
+  .cta {
+    margin-left: 0;
+    width: 100%; /* CTA pleine largeur en mobile */
+  }
+}
+
+/* Carte description */
+.product-desc {
+  margin-top: 16px;
+}
+.product-desc h2 {
+  margin: 0 0 8px;
+  font-size: 1.125rem;
+}

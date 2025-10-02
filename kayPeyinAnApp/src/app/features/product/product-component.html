@@ -1,73 +1,76 @@
-<div class="card-container">
-  <button mat-stroked-button color="primary" (click)="goBack()">
+<div class="page">
+  <button mat-stroked-button color="primary" (click)="goBack()" class="back-btn">
     <mat-icon>arrow_back</mat-icon>
     Retour
   </button>
 
   @if (product) {
-    <div class="card">
-      <!-- Image + infos -->
-      <mat-card class="product-card">
-        <img
-          mat-card-image
-          [src]="product.imageUrl"
-          [alt]="product.product_name"
-        />
-        <mat-card-header>
-          <mat-card-title>{{ product.product_name }}</mat-card-title>
-          <mat-card-subtitle>
-            Catégorie : {{ product.category | category }}
-          </mat-card-subtitle>
-        </mat-card-header>
+    <!-- Bloc principal -->
+    <mat-card class="product-hero">
+      <div class="product-grid">
+        <!-- Colonne image -->
+        <div class="product-media">
+          <img
+            class="product-image"
+            [src]="product.imageUrl"
+            [alt]="product.product_name"
+            loading="lazy"
+          />
+        </div>
 
-        <mat-card-content>
-          <p>{{ product.price | currency:'EUR' }}</p>
-        </mat-card-content>
-      </mat-card>
+        <!-- Colonne infos -->
+        <div class="product-info">
+          <h1 class="product-title">{{ product.product_name }}</h1>
+          <div class="product-meta">
+            <span class="category">Catégorie : {{ product.category | category }}</span>
+          </div>
 
-      <!-- Actions (quantité + panier) -->
-      <div class="product-actions">
-        <div class="quantity">
-          <label class="mb-2 block font-bold" for="qty">Quantité</label>
+          <div class="product-price">
+            {{ product.price | currency:'EUR' }}
+          </div>
 
-          <div class="qty-row">
-            <button mat-icon-button (click)="decrement()" [disabled]="quantity <= minQty">
-              <mat-icon>remove</mat-icon>
-            </button>
+          <!-- Actions (quantité + CTA) -->
+          <div class="product-actions">
+            <div class="qty">
+              <span class="qty-label">Quantité</span>
+              <div class="qty-row">
+                <button mat-icon-button (click)="decrement()" [disabled]="quantity <= minQty" aria-label="Diminuer la quantité">
+                  <mat-icon>remove</mat-icon>
+                </button>
 
-            <mat-form-field appearance="outline" class="qty-field">
-              <input
-                id="qty"
-                matInput
-                type="number"
-                [(ngModel)]="quantity"
-                [min]="minQty"
-                [max]="maxQty"
-                [step]="1"
-                (ngModelChange)="onQtyChange($event)"
-              />
-            </mat-form-field>
+                <mat-form-field appearance="outline" class="qty-field">
+                  <input
+                    id="qty"
+                    matInput
+                    type="number"
+                    [(ngModel)]="quantity"
+                    [min]="minQty"
+                    [max]="maxQty"
+                    [step]="1"
+                    (ngModelChange)="onQtyChange($event)"
+                  />
+                </mat-form-field>
 
-            <button mat-icon-button (click)="increment()" [disabled]="quantity >= maxQty">
-              <mat-icon>add</mat-icon>
+                <button mat-icon-button (click)="increment()" [disabled]="quantity >= maxQty" aria-label="Augmenter la quantité">
+                  <mat-icon>add</mat-icon>
+                </button>
+              </div>
+            </div>
+
+            <button mat-raised-button color="accent" class="cta"
+                    (click)="addToCart(product.id, $event)">
+              <mat-icon>shopping_cart</mat-icon>
+              Ajouter au panier
             </button>
           </div>
         </div>
-
-        <button
-          mat-raised-button
-          color="accent"
-          (click)="addToCart(product.id, $event)"
-        >
-          <mat-icon>shopping_cart</mat-icon>
-          Ajouter au panier
-        </button>
       </div>
-    </div>
+    </mat-card>
 
     <!-- Description -->
-    <mat-card class="product-description">
+    <mat-card class="product-desc">
       <mat-card-content>
+        <h2>Description</h2>
         <p>{{ product.description }}</p>
       </mat-card-content>
     </mat-card>
