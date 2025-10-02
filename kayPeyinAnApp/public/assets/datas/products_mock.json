@@ -1,0 +1,306 @@
+[
+    {
+        "product_name": "Baguette Tradition",
+        "category": 0,
+        "description": "Baguette artisanale, croquante \u00e0 l'ext\u00e9rieur et tendre \u00e0 l'int\u00e9rieur.",
+        "id": 1,
+        "price": 3.37,
+        "imageUrl": "assets/images/baguette.png"
+    },
+    {
+        "product_name": "Pain Complet",
+        "category": 0,
+        "description": "Pain complet fait maison, riche en fibres et au go\u00fbt authentique.",
+        "id": 2,
+        "price": 1.52,
+        "imageUrl": "assets/images/pain_complet.png"
+    },
+    {
+        "product_name": "Pain de Nordique",
+        "category": 0,
+        "description": "Pain de Nordique fait maison, avec une mie a\u00e9r\u00e9e et une cro\u00fbte dor\u00e9e.",
+        "id": 3,
+        "price": 6.2,
+        "imageUrl": "assets/images/pain_nordique.png"
+    },
+    {
+        "product_name": "Beignet aux pommes",
+        "category": 1,
+        "description": "Beignet aux pommes l\u00e9g\u00e8rement sucr\u00e9, parfait pour un go\u00fbter.",
+        "id": 4,
+        "price": 4.23,
+        "imageUrl": "assets/images/beignet_pomme.png"
+    },
+    {
+        "product_name": "Baguette Sésame",
+        "category": 0,
+        "description": "Baguette artisanale, croquante \u00e0 l'ext\u00e9rieur et tendre \u00e0 l'int\u00e9rieur.",
+        "id": 5,
+        "price": 6.36,
+        "imageUrl": "assets/images/baguette_sesame.png"
+    },
+    {
+        "product_name": "Baguette multi-graines",
+        "category": 0,
+        "description": "Baguette multi-graines, riche en saveurs et id\u00e9al pour le petit d\u00e9jeuner.",
+        "id": 6,
+        "price": 3.61,
+        "imageUrl": "assets/images/baguette_graines.png"
+    },
+    {
+        "product_name": "Pain de Chocolat",
+        "category": 0,
+        "description": "Pain de chocolat fondant dans une p\u00e2te feuillet\u00e9e dor\u00e9e.",
+        "id": 7,
+        "price": 5.98,
+        "imageUrl": "assets/images/pain_chocolat.png"
+    },
+    {
+        "product_name": "Cake nature",
+        "category": 1,
+        "description": "Cake traditionel l\u00e9g\u00e8r, parfaite pour accompagner le th\u00e9.",
+        "id": 8,
+        "price": 5.76,
+        "imageUrl": "assets/images/cake_nature.png"
+    },
+    {
+        "product_name": "Croissant Beurre",
+        "category": 0,
+        "description": "Croissant au beurre dor\u00e9, l\u00e9ger et a\u00e9r\u00e9.",
+        "id": 9,
+        "price": 2.06,
+        "imageUrl": "assets/images/croissant.png"
+    },
+    {
+        "product_name": "\u00c9clair au Chocolat",
+        "category": 1,
+        "description": "\u00c9clair au chocolat avec une cr\u00e8me p\u00e2tissi\u00e8re onctueuse et un gla\u00e7age fondant.",
+        "id": 10,
+        "price": 5.8,
+        "imageUrl": "assets/images/eclair_chocolat.png"
+    },
+    {
+        "product_name": "Macaron Framboise",
+        "category": 1,
+        "description": "Macaron \u00e0 la framboise avec un c\u0153ur cr\u00e9meux et un go\u00fbt sucr\u00e9.",
+        "id": 11,
+        "price": 5.36,
+        "imageUrl": "assets/images/macaron_pistache_fraise.png"
+    },
+    {
+        "product_name": "Tartelette Citron",
+        "category": 1,
+        "description": "Tartelette au citron acidul\u00e9e avec une cr\u00e8me l\u00e9g\u00e8re et une p\u00e2te croquante.",
+        "id": 12,
+        "price": 5.01,
+        "imageUrl":"assets/images/tarte_citron.png"
+    },
+    {
+        "product_name": "Muffin Chocolat",
+        "category": 1,
+        "description": "Muffin au chocolat, moelleux et savoureux.",
+        "id": 13,
+        "price": 4.46,
+        "imageUrl": "assets/images/eclair_chocolat.png"
+    },
+    {
+        "product_name": "Tarte Normande",
+        "category": 1,
+        "description": "Tarte Normande faite maison avec une p\u00e2te sabl\u00e9e et des pommes caram\u00e9lis\u00e9es.",
+        "id": 14,
+        "price": 3.79,
+        "imageUrl": "assets/images/tarte_normande.png"
+    },
+    {
+        "product_name": "Tartelette Fraise",
+        "category": 1,
+        "description": "Tartelette aux fraises fra\u00eeches avec une cr\u00e8me p\u00e2tissi\u00e8re l\u00e9g\u00e8re.",
+        "id": 15,
+        "price": 3.50,
+        "imageUrl": "assets/images/tartelette_fraises.png"
+    },
+    {
+        "product_name": "Pain aux raisins",
+        "category": 0,
+        "description": "Pain aux raisin, sucr\u00e9e et fourr\u00e9e au chocolat fondant dans une p\u00e2te feuillet\u00e9e.",
+        "id": 16,
+        "price": 2.70,
+        "imageUrl": "assets/images/pain_raisins.png"
+    },
+    {
+        "product_name": "Madeleine",
+        "category": 1,
+        "description": "Madeleine moelleuse au beurre, d\u00e9licieusement parfum\u00e9e.",
+        "id": 17,
+        "price": 1.20,
+        "imageUrl": "assets/images/madeleine.png"
+    },
+    {
+        "product_name": "Chausson aux Pommes",
+        "category": 0,
+        "description": "Chausson aux pommes, fait maison avec une p\u00e2te feuillet\u00e9e l\u00e9g\u00e8re.",
+        "id": 18,
+        "price": 6.35,
+        "imageUrl": "assets/images/chausson_pommes.png"
+    },
+    {
+        "product_name": "Sandwich Poulet Avocat",
+        "category": 2,
+        "description": "Sandwich au poulet grill\u00e9 avec une sauce C\u00e9sar cr\u00e9meuse.",
+        "id": 19,
+        "price": 4.23,
+        "imageUrl": "assets/images/sandwich_poulet_avocat.png"
+    },
+    {
+        "product_name": "Quiche Lorraine",
+        "category": 2,
+        "description": "Quiche Lorraine faite maison, avec des lardons, du fromage et des \u0153ufs.",
+        "id": 20,
+        "price": 4.36,
+        "imageUrl": "assets/images/tarte_sale.png"
+    },
+    {
+        "product_name": "Pizza Margherita",
+        "category": 2,
+        "description": "Pizza Margherita avec une sauce tomate maison et de la mozzarella fondante.",
+        "id": 21,
+        "price": 5.76,
+        "imageUrl": "assets/images/pizza.png"
+    },
+    {
+        "product_name": "Wrap Saumon",
+        "category": 2,
+        "description": "Wrap garni de saumon fum\u00e9, fromage frais et laitue croquante.",
+        "id": 22,
+        "price": 4.87,
+        "imageUrl": "assets/images/wrap.png"
+    },
+    {
+        "product_name": "Sandwich Jambon Fromage",
+        "category": 2,
+        "description": "Sandwich jambon-fromage servi dans une baguette fra\u00eeche.",
+        "id": 23,
+        "price": 4.92,
+        "imageUrl": "assets/images/sandwich_jambon_fromage.png"
+    },
+    {
+        "product_name": "Panini",
+        "category": 2,
+        "description": "Panini garnie aux choix.",
+        "id": 24,
+        "price": 2.62,
+        "imageUrl": "assets/images/panini.png"
+    },
+    {
+        "product_name": "Cr\u00eape sucr\u00e9e",
+        "category": 2,
+        "description": "Cr\u00eape \u00e9paisse et moelleuse, garnie de confiture maison.",
+        "id": 25,
+        "price": 2.13,
+        "imageUrl": "assets/images/crepe_sucree.png"
+    },
+    {
+        "product_name": "Cr\u00eape sal\u00e9e",
+        "category": 2,
+        "description": "Cr\u00eape \u00e9paisse et moelleuse.",
+        "id": 26,
+        "price": 6.23,
+        "imageUrl": "assets/images/crepe_salee.png"
+    },
+    {
+        "product_name": "Salade C\u00e9sar",
+        "category": 2,
+        "description": "Salade C\u00e9sar avec poulet grill\u00e9, laitue et sauce maison.",
+        "id": 27,
+        "price": 5.39,
+        "imageUrl": "assets/images/salade_cesar.png"
+    },
+    {
+        "product_name": "Tartes Sal\u00e9es",
+        "category": 2,
+        "description": "Tartes sal\u00e9es garnies de l\u00e9gumes de saison et d'une p\u00e2te feuillet\u00e9e.",
+        "id": 28,
+        "price": 4.02,
+        "imageUrl": "assets/images/tarte_sale.png"
+    },
+    {
+        "product_name": "Caf\u00e9 Latte",
+        "category": 3,
+        "description": "Caf\u00e9 latte cr\u00e9meux, fait avec du lait mousseux et un espresso cors\u00e9.",
+        "id": 29,
+        "price": 4.51,
+        "imageUrl": "assets/images/latte_macaron_cafe.png"
+    },
+    {
+        "product_name": "Jus d'Orange Frais",
+        "category": 3,
+        "description": "Jus d'orange frais press\u00e9, plein de vitamines.",
+        "id": 30,
+        "price": 5.04,
+        "imageUrl": "assets/images/jus_oranges.png"
+    },
+    {
+        "product_name": "Smoothie Fraise",
+        "category": 3,
+        "description": "Smoothie aux fraises fra\u00eeches, d\u00e9licieux et rafra\u00eechissant.",
+        "id": 31,
+        "price": 6.38,
+        "imageUrl": "assets/images/smoothie_fraise.png"
+    },
+    {
+        "product_name": "Caf\u00e9 Expresso",
+        "category": 3,
+        "description": "Caf\u00e9 expresso cors\u00e9 et intense.",
+        "id": 32,
+        "price": 2.41,
+        "imageUrl": "assets/images/cafe.png"
+    },
+    {
+        "product_name": "Cappuccino",
+        "category": 3,
+        "description": "Ccappuccino onctueux et parfait pour les gourmands.",
+        "id": 33,
+        "price": 5.79,
+        "imageUrl": "assets/images/cappuccino.png"
+    },
+    {
+        "product_name": "Chocolat Chaud",
+        "category": 3,
+        "description": "Chocolat chaud cr\u00e9meux, id\u00e9al pour se r\u00e9chauffer pendant l'hiver.",
+        "id": 34,
+        "price": 2.04,
+        "imageUrl": "assets/images/chocolat_chaud.png"
+    },
+    {
+        "product_name": "Jus de Pomme",
+        "category": 3,
+        "description": "Jus de pomme naturel.",
+        "id": 35,
+        "price": 4.23,
+        "imageUrl": "assets/images/jus_pommes.png"
+    },
+    {
+        "product_name": "Pulco citronnade",
+        "category": 3,
+        "description": "Citronnade sucr\u00e9e et rafra\u00eechissante.",
+        "id": 36,
+        "price": 1.53,
+        "imageUrl": "assets/images/pulco_citronnade.png"
+    },
+    {
+        "product_name": "Boisson Th\u00e9 Glac\u00e9",
+        "category": 3,
+        "description": "Th\u00e9 glac\u00e9 peche, l\u00e9ger et d\u00e9salt\u00e9rant.",
+        "id": 37,
+        "price": 3.79,
+        "imageUrl": "assets/images/fuzetea_peche.png"
+    },
+    {
+        "product_name": "Fromage blanc et compote de pommes maison",
+        "category": 2,
+        "description": "Fromage blanc frais avec sa compote de pommes maison, douce et onctueuse.",
+        "id": 38,
+        "price": 3.48,
+        "imageUrl": "assets/images/fromage_blanc_pommes.png"
+    }
+]
