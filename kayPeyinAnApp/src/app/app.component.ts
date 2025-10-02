@@ -9,7 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     RouterOutlet, 
     MatToolbarModule, 
-    MatButtonModule],
+    MatButtonModule
+  ],
   template: `
     <mat-toolbar color="primary">
       <span>kayPeyinAnApp</span>

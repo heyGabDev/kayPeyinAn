@@ -130,6 +130,7 @@ export class ProductsComponent implements OnInit {
 
   // UI actions
   goToProduct(productId: number): void {
+    console.log('Product id: ', productId)
     this.router.navigate(['/product', productId]);
   }
 
