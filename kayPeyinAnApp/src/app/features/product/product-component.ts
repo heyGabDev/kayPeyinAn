@@ -46,8 +46,8 @@ export class ProductComponent implements OnInit {
   private ngLocation = inject(NgLocation);
 
   ngOnInit(): void {
-     const idParam = this.route.snapshot.paramMap.get('id'); // string | null
-  const id = idParam === null ? NaN : Number(idParam);            // ⚠️ ne pas faire Number(null) à l’aveugle
+  const idParam = this.route.snapshot.paramMap.get('id'); 
+  const id = idParam === null ? NaN : Number(idParam); 
 
   if (Number.isFinite(id)) {
     this.productId = id;
