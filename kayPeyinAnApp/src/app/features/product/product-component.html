@@ -18,21 +18,22 @@
           />
         </div>
 
-        <!-- Colonne infos -->
+        <!-- Colonne infos / cta-->
         <div class="product-info">
           <h1 class="product-title">{{ product.product_name }}</h1>
           <div class="product-meta">
             <span class="category">Catégorie : {{ product.category | category }}</span>
           </div>
 
-          <div class="product-price">
-            {{ product.price | currency:'EUR' }}
+          <div class="product-desc">
+            <h2 class="product-title">Description</h2>
+            <p>{{ product.description }}</p>
           </div>
 
-          <!-- Actions (quantité + CTA) -->
+          <div class="product-price"> {{ product.price | currency:'EUR' }} </div>
+
           <div class="product-actions">
             <div class="qty">
-              <span class="qty-label">Quantité</span>
               <div class="qty-row">
                 <button mat-icon-button (click)="decrement()" [disabled]="quantity <= minQty" aria-label="Diminuer la quantité">
                   <mat-icon>remove</mat-icon>
@@ -55,13 +56,15 @@
                   <mat-icon>add</mat-icon>
                 </button>
               </div>
+              <span class="qty-label">Quantité</span>
             </div>
-
-            <button mat-raised-button color="accent" class="cta"
-                    (click)="addToCart(product.id, $event)">
-              <mat-icon>shopping_cart</mat-icon>
-              Ajouter au panier
-            </button>
+          <div class="cta">
+                <button mat-raised-button color="accent" 
+                        (click)="addToCart(product.id, $event)">
+                  <mat-icon>shopping_cart</mat-icon>
+                  Ajouter au panier
+                </button>
+          </div>
           </div>
         </div>
       </div>
